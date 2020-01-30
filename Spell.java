@@ -4,7 +4,7 @@ public class Spell {
     private int manaReq;
     private String SPELL_TYPE;
 
-    public void Spell(int dmg, String dmgType, int manaReq) {
+    public Spell(int dmg, String dmgType, int manaReq) {
         this.dmg = dmg;
         this.dmgType = dmgType;
         this.manaReq = manaReq;
