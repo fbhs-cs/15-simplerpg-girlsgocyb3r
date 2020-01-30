@@ -4,6 +4,12 @@ public class Spell {
     private int manaReq;
     private String SPELL_TYPE;
 
+    /**
+     * Constructor for Spell class
+     * @param dmg Damage
+     * @param dmgType Damage Type
+     * @param manaReq Mana Required
+     */
     public Spell(int dmg, String dmgType, int manaReq) {
         this.dmg = dmg;
         this.dmgType = dmgType;
