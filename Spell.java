@@ -48,4 +48,12 @@ public class Spell {
     public int getManaReq() {
         return this.manaReq;
     }
+
+    /**
+     * This returns a string of probably useful information.
+     * @return String of useful information
+     */
+    public String toString() {
+        return this.dmg + " " + this.dmgType + " " + this.manaReq + " " + this.SPELL_TYPE;
+    }
 }
