@@ -4,7 +4,13 @@ public class Spell {
     private int manaReq;
     private String SPELL_TYPE;
 
-    public void Spell(int dmg, String dmgType, int manaReq) {
+    /**
+     * Constructor for Spell class
+     * @param dmg Damage
+     * @param dmgType Damage Type
+     * @param manaReq Mana Required
+     */
+    public Spell(int dmg, String dmgType, int manaReq) {
         this.dmg = dmg;
         this.dmgType = dmgType;
         this.manaReq = manaReq;
@@ -47,5 +53,13 @@ public class Spell {
      */
     public int getManaReq() {
         return this.manaReq;
+    }
+
+    /**
+     * This returns a string of probably useful information.
+     * @return String of useful information
+     */
+    public String toString() {
+        return this.dmg + " " + this.dmgType + " " + this.manaReq + " " + this.SPELL_TYPE;
     }
 }

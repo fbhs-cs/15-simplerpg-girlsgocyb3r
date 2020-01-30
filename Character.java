@@ -1,21 +1,29 @@
 public class Character{
     private int hp;
     private int xp;
-    private String[] weakness;
+    private String weakness;
     private String name;
-    private static String CLASS_NAME = "Default";
+    private static String CLASS_NAME = "Person";
     private int speed;
-    public Character(String iname,String[] iweakness,int ixp){
+    private int mana;
+    public Character(String iname,String iweakness,int ixp){
         hp=10*(int)Math.sqrt(ixp);
         name=iname;
         xp=ixp;
         weakness=iweakness;
         speed=5;
+        mana=0;
     }
-    public int getHp(){
+    public int getMana(){
+        return mana;
+    }
+    public void setMana(int amount){
+        mana=amount;
+    }
+    public int getHP(){
         return hp;
     }
-    public void setHp(int amount){
+    public void setHP(int amount){
         hp=amount;
     }
     public void setLevel(int level){
@@ -34,17 +42,15 @@ public class Character{
         return 10*((int) Math.sqrt(xp));
     }
     public boolean isWeakTo(String type){
-        for (String weak:weakness){
-            if (type.equals(weak)){
+            if (weakness.equals(type)){
                 return true;
             }
-        }
         return false;
     }
     public String getName(){
         return name;
     }
-    public void attack(Character target){
+    public void chooseAction(Character target){
         System.out.println("You egg!");
     }
     public void takeDmg(int dmg){
@@ -57,5 +63,9 @@ public class Character{
     }
     public int getSpeed(){
         return speed;
+    }
+    public String toString(){
+        return name+" is a level "+getLevel()+" "+CLASS_NAME
+        +" with a speed of "+speed+" and a weakness to "+weakness;
     }
 }
