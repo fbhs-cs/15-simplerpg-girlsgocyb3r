@@ -48,7 +48,7 @@ public class Spell {
     }
 
     /**
-     * This returns the amount of mana required to cast a specific spell
+     * This returns the amount of mana required to cast a specific spell.
      * @return mana required
      */
     public int getManaReq() {
