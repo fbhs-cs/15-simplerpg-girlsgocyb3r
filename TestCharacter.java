@@ -1,6 +1,6 @@
 public class TestCharacter {
     public static void main(String[] args) {
-        Character sans = new Character("sans","Hard Plastic",10);
+        Character sans = new Character("🐡🥕augh","Hard Plastic",10);
         Character enemy = new Character("generic","Dark",10);
         System.out.println("Current mana: " + sans.getMana());
         sans.setMana(69);
