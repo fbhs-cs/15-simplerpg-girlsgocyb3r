@@ -10,5 +10,8 @@ public class TestWeapon{
         System.out.println(Hero2.getHP());
         System.out.println(Excalibur.getWeaponType());
         System.out.println(Excalibur.getDmgType());
+        System.out.println(Excalibur.getCrit());
+        System.out.println(Excalibur.toString());
+        
     }
 }
