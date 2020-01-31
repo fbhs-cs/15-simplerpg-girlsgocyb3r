@@ -60,6 +60,6 @@ public class Spell {
      * @return String of useful information
      */
     public String toString() {
-        return this.dmg + " " + this.dmgType + " " + this.manaReq + " " + this.SPELL_TYPE;
+        return "Damage: " + this.dmg + "   Damage Type: " + this.dmgType + "   Mana Required: " + this.manaReq + "   Spell Type: " + this.SPELL_TYPE;
     }
 }
