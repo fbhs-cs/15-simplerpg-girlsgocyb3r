@@ -1,4 +1,4 @@
-public class Spell {
+public abstract class Spell {
     private int dmg;
     private String dmgType;
     private int manaReq;
@@ -23,13 +23,7 @@ public class Spell {
      * @param receiver the character getting hit by the spell
      * @return damage caused by the spell
      */
-    public int cast(Character sender, Character receiver) {
-        if(sender.getMana() >= getManaReq()) {
-            this.dmg = 10;
-        }
-        else this.dmg = 0;
-        return this.dmg;
-    }
+    public abstract int cast(Character sender, Character receiver);
 
     /**
      * This returns the damage a spell will deal.
