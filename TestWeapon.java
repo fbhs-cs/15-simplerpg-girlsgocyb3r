@@ -1,6 +1,6 @@
 public class TestWeapon{
     public static void main(String[] args) {
-        Weapon Excalibur= new Weapon(2,"Fire",.2);
+        Weapon Excalibur=new Weapon(2,"Fire",.2);
         Character Hero=new Character("Bob","Fire",1);
         Character Hero2=new Character("Steve","Not fire",400);
         System.out.println(Excalibur.toString());
