@@ -1,4 +1,4 @@
-public class Character{
+public abstract class Character{
     private int hp;
     private int xp;
     private String weakness;
