@@ -1,4 +1,4 @@
-public class Character{
+public abstract class Character{
     private int hp;
     private int xp;
     private String weakness;
@@ -6,8 +6,9 @@ public class Character{
     private static String CLASS_NAME = "Person";
     private int speed;
     private int mana;
-    public Character(String iname,String iweakness,int ixp){
-        hp=10*(int)Math.sqrt(ixp);
+    private int baseHp;
+    public Character(String iname,String iweakness,int ixp,int baseHp){
+        hp=baseHp*(int)Math.sqrt(ixp);
         name=iname;
         xp=ixp;
         weakness=iweakness;
@@ -39,7 +40,7 @@ public class Character{
         return (int) Math.sqrt(xp);
     }
     private int getMaxHP(){
-        return 10*((int) Math.sqrt(xp));
+        return baseHp*((int) Math.sqrt(xp));
     }
     public boolean isWeakTo(String type){
             if (weakness.equals(type)){
@@ -50,9 +51,7 @@ public class Character{
     public String getName(){
         return name;
     }
-    public void chooseAction(Character target){
-        System.out.println("You egg!");
-    }
+    public abstract void chooseAction(Character target);
     public void takeDmg(int dmg){
         hp-=dmg;
         if (hp<0) hp=0;
@@ -63,6 +62,9 @@ public class Character{
     }
     public int getSpeed(){
         return speed;
+    }
+    public void setSpeed(int num){
+        speed=num;
     }
     public String toString(){
         return name+" is a level "+getLevel()+" "+CLASS_NAME
