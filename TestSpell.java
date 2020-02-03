@@ -8,6 +8,7 @@ public class TestSpell{
         System.out.println( spell.cast(devin, joe));
         devin.setMana(10);
         System.out.println(spell.toString());
+        
 
 
 
