@@ -1,5 +1,5 @@
 
-public class Weapon{
+public abstract class Weapon{
         private int dmg;
         private String dmgType;
         private double crit;
@@ -17,27 +17,10 @@ public class Weapon{
          * decides if it crits or not
          * @return how much damage it does
          */
-        public int attack(Character target){
-            double possible = Math.random();
-            if (target.isWeakTo(WEAPON_TYPE)){
-                if(possible <= crit ){
-                    target.takeDmg(dmg + 5 * 2);
-                    return dmg + 5 * 2;
-                }
-                target.takeDmg(dmg + 5);
-                return dmg + 5;
-
-            }
-
-            else if (possible <= crit){
-                target.takeDmg(dmg * 2);
-                return dmg * 2;
-            }
-            target.takeDmg(dmg);
-            return dmg;
+        public abstract int attack(Character target);
 
 
-        }
+        
         
         /** 
          * @return what type of weapon type it is
