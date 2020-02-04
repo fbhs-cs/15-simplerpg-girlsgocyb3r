@@ -6,13 +6,14 @@ public class Wizard extends Character {
     public Scanner in = new Scanner(System.in);
     public Wizard(String name, Spell spell) {
         super(name,"Plastic",1,5);
-        this.spell = spell;
+        // this.spell = spell;
         this.CLASS_NAME = "Wizard";
     }
     public void chooseAction(Character target) {
         System.out.print("What do you want to do? (1, 2, 3) > ");
         int option = in.nextInt();
         if (option == 1) {
+            this.spell = Gun;
             System.out.println("Wizard uses Gun");
             System.out.println("Enemy takes " + spell.cast(Wizard,Reaper) + " damage");
         }
