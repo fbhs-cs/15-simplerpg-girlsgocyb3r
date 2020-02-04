@@ -14,7 +14,7 @@ public abstract class Spell {
         this.dmg = dmg;
         this.dmgType = dmgType;
         this.manaReq = manaReq;
-        this.SPELL_TYPE = "Dark";
+        this.SPELL_TYPE = SPELL_TYPE;
     }
 
     /**
