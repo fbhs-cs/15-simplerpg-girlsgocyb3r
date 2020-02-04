@@ -2,7 +2,7 @@ public abstract class Gun extends Spell {
     private int dmg;
     private String SPELL_TYPE;
     public Gun(int dmg, String dmgType) {
-        super(60,"Dark",20);
+        super(60,"Dark",50);
         SPELL_TYPE = "Dark";
     }
     @Override
