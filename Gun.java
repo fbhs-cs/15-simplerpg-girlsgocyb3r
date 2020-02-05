@@ -1,7 +1,7 @@
-public abstract class Gun extends Spell {
+public class Gun extends Spell {
     private int dmg;
-    private String SPELL_TYPE;
-    public Gun(int dmg, String dmgType) {
+    String SPELL_TYPE;
+    public Gun() {
         super(60,"Dark",50);
         SPELL_TYPE = "Dark";
     }
@@ -10,7 +10,10 @@ public abstract class Gun extends Spell {
         if(sender.getMana() >= getManaReq()) {
             this.dmg = 60;
         }
-        else this.dmg = 0;
+        else {
+            this.dmg = 0;
+            System.out.print("You do not have enough mana to use this spell.");
+        }
         return this.dmg;
     }
 }
