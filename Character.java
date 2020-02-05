@@ -39,7 +39,7 @@ public abstract class Character{
     public int getLevel(){
         return (int) Math.sqrt(xp);
     }
-    private int getMaxHP(){
+    public int getMaxHP(){
         return baseHp*((int) Math.sqrt(xp));
     }
     public boolean isWeakTo(String type){
