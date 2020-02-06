@@ -3,10 +3,12 @@ import java.util.Random;
 
 
 public class Angel extends Character{
-    Weapon weapon;
+    Spell spell;
     public Angel(String iname,int ixp){
 
         super(iname, "Dark" ,ixp,12);
+        setMana(20);
+        Spell spell = new Lighting();
         
        
         
@@ -28,7 +30,14 @@ public class Angel extends Character{
     @Override
     public void chooseAction(Character target){
         Random rand=new Random();
-        int choice=rand.nextInt(3);
+        int choice = rand.nextInt(2);
+        if(choice == 0){
+            spell.cast(this, target);
+        }
+        if(choice == 1){
+            healSomeone();
+        }   
+
 
         
     }

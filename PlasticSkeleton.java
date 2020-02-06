@@ -4,7 +4,7 @@ public  class PlasticSkeleton extends Character{
     Weapon weapon;
     Spell spell;
     public PlasticSkeleton(String name,int xp){
-        super(name,"Plastic",xp,6);
+        super(name,"Light",xp,6);
         setSpeed(11);
         weapon= new PlasticScythe(5,5);
     }
