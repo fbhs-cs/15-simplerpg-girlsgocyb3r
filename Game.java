@@ -5,7 +5,7 @@ public class Game {
     static Character player;
 
     // change these to match weapon/spell types
-    static final String[] WEAKNESSES = {"Weakness #1", "Weakness #2", "Weakness #3"};
+    static final String[] WEAKNESSES = {"Dark", "Light", "Plastic"};
 
     
     
@@ -38,9 +38,9 @@ public class Game {
         while (true) {
             try {
                 System.out.println("What class would you like to play?  Here are your options:");
-                System.out.println("1. Reaper"); // change this
-                System.out.println("2. Wizard"); // change this
-                System.out.println("3. Third"); // change this
+                System.out.println("1. Reaper(Weapon)(Dark)"); // change this
+                System.out.println("2. Wizard(Spell)(Light)"); // change this
+                System.out.println("3. Third(Both)(Plastic)"); // change this
                 System.out.print("> ");
                 classChoice = Integer.parseInt(in.nextLine());
                 if(classChoice < 1 || classChoice > 3) {
@@ -54,24 +54,24 @@ public class Game {
             }
         }
 
-        int weaknessChoice;
-        while (true) {
-            try {
-                System.out.println("What weakness will your character have?  Here are your options:");
-                for(int i = 0; i < WEAKNESSES.length; i++) {
-                    System.out.printf("%d. %s\n",i+1,WEAKNESSES[i]);
-                }
-                System.out.print("> ");
-                weaknessChoice = Integer.parseInt(in.nextLine());
-                if(weaknessChoice < 1 || weaknessChoice > WEAKNESSES.length) {
-                    System.out.println("Invalid choice!");
-                }
-                break;
+        // int weaknessChoice;
+        // while (true) {
+        //     try {
+        //         System.out.println("What weakness will your character have?  Here are your options:");
+        //         for(int i = 0; i < WEAKNESSES.length; i++) {
+        //             System.out.printf("%d. %s\n",i+1,WEAKNESSES[i]);
+        //         }
+        //         System.out.print("> ");
+        //         weaknessChoice = Integer.parseInt(in.nextLine());
+        //         if(weaknessChoice < 1 || weaknessChoice > WEAKNESSES.length) {
+        //             System.out.println("Invalid choice!");
+        //         }
+        //         break;
 
-            } catch (Exception e) {
-                System.out.println("You must enter a number!");
-            }
-        }
+        //     } catch (Exception e) {
+        //         System.out.println("You must enter a number!");
+        //     }
+        // }
 
         String weakness = WEAKNESSES[weaknessChoice-1];
 
