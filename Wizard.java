@@ -15,11 +15,18 @@ public class Wizard extends Character {
         System.out.print("What do you want to do? (1, 2, 3) > ");
         int option = in.nextInt();
         if (option == 1) {
-            System.out.println("Wizard uses Gun");
-            System.out.println("Enemy takes " + spell.cast(this,target) + " damage");
+            spell = new Gun();
+            System.out.println("Wizard uses gun.");
+            System.out.println("Enemy takes " + spell.cast(this,target) + " damage.");
         }
         else if (option == 2) {
-            System.out.println("Wizard uses ");
+            spell = new Lightning();
+            System.out.println("Wizard uses lightning.");
+            System.out.println("Enemy takes " + spell.cast(this,target) + " damage.");
+        }
+        else if (option == 3) {
+            spell = new Polycondensation();
+            System.out.println("");
         }
         else System.out.println("I don't understand your answer, so you lose your turn.");
     }
