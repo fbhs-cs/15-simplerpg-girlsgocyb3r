@@ -1,8 +1,8 @@
 public abstract class Lightning extends Spell {
     private int dmg;
     private String SPELL_TYPE;
-    public Lightning(int dmg) {
-        super(dmg,"Light",5);
+    public Lightning() {
+        super(10,"Light",5);
         SPELL_TYPE = "Lightning";
     }
     @Override

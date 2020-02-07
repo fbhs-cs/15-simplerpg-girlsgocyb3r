@@ -2,13 +2,17 @@ import java.util.Scanner;
 
 public class Reaper extends Character{
     Weapon weapon;
-    public Reaper(String iname,int ixp,Weapon iweapon){
-        super(iname, "Light" ,ixp,15);
-        weapon = iweapon;
+    public Reaper(String iname){
+        super(iname, "Light" ,1,15);
+        weapon = new PlasticScythe(7,.15);
         
 
        
         
+    }
+    public void updateLevel(){
+        super.updatelevel();
+        speed=15*getlevel();
     }
     public void killSomeone(){
         

@@ -15,6 +15,9 @@ public abstract class Character{
         speed=5;
         mana=0;
     }
+    public void updateLevel(){
+        hp=baseHp*getLevel();
+    }
     public int getMana(){
         return mana;
     }
