@@ -38,9 +38,9 @@ public class Game {
         while (true) {
             try {
                 System.out.println("What class would you like to play?  Here are your options:");
-                System.out.println("1. Class #1"); // change this
-                System.out.println("2. Class #2"); // change this
-                System.out.println("3. Class #3"); // change this
+                System.out.println("1. Reaper"); // change this
+                System.out.println("2. Wizard"); // change this
+                System.out.println("3. Third"); // change this
                 System.out.print("> ");
                 classChoice = Integer.parseInt(in.nextLine());
                 if(classChoice < 1 || classChoice > 3) {
@@ -76,11 +76,11 @@ public class Game {
         String weakness = WEAKNESSES[weaknessChoice-1];
 
         if(classChoice == 1)
-            player = new Character(name,weakness,10); // This needs to be updated for each class
+            player = new Reaper(name,1,new PlasticScythe(10,0)); // This needs to be updated for each class
         else if(classChoice == 2)
-            player = new Character(name, weakness,20); // update for the class
+            player = new Wizard(name); // update for the class
         else if(classChoice == 3)
-            player = new Character(name, weakness,5); // update for the class
+            player = new ThirdClass(name); // update for the class
 
         
     }
@@ -98,11 +98,11 @@ public class Game {
 
         double rand = Math.random();
         if(rand < 0.3) {
-            return new Character("Enemy1",WEAKNESSES[randWeakness],randSpeed); // change to enemy class constructor
+            return new Angel("Angel",1); // change to enemy class constructor
         } else if (rand < 0.6) {
-            return new Character("Enemy2",WEAKNESSES[randWeakness],randSpeed); // change to enemy class constructor
+            return new Zombie("Zombie"); // change to enemy class constructor
         } else {
-            return new Character("Enemy3",WEAKNESSES[randWeakness],randSpeed); // change to enemy class constructor
+            return new PlasticSkeleton("Plastic Skeleton",1); // change to enemy class constructor
         }
     }
 

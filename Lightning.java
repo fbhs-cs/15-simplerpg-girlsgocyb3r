@@ -1,4 +1,4 @@
-public abstract class Lightning extends Spell {
+public class Lightning extends Spell {
     private int dmg;
     private String SPELL_TYPE;
     public Lightning(int dmg) {

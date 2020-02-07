@@ -8,7 +8,7 @@ public class Angel extends Character{
 
         super(iname, "Dark" ,ixp,12);
         setMana(20);
-        Spell spell = new Lighting();
+        Spell spell = new Lightning(10);
         
        
         
